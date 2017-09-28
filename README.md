@@ -61,7 +61,7 @@ sudo apt-get install npm
 
 ### Circuit
 
-![Circuit](https://github.com/NutriconsultorOnline/slack2pi/Slack2piCircuit.png "slack2pi circuit")
+![Circuit](https://github.com/NutriconsultorOnline/slack2pi/blob/master/Slack2piCircuit.png "slack2pi circuit")
 
 ## Programming
 
