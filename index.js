@@ -42,10 +42,11 @@ board.on("ready", function() {
 		// and we check that it was sent from a specific bot using his id
 		if(message.subtype == 'bot_message' && message.bot_id == 'BOT_ID_HERE') {
 			if(message.attachments && message.attachments.length) {
+				// Here we expect that the result comes like this: *failure* or *success* so we use this regex to get it
+				// The result text might be different accordingly to your CI notification (we think that, we are not sure).
+				// But you can make a regex that suits for you
 				var build_result = /^\*(.+)\*/.exec(message.attachments[0].text);
 				if(build_result) {
-					redLed.off();
-					greenLed.off();
 					if(build_result[1] == 'success') {
 						greenLed.on();
 						greenLed.blink();
